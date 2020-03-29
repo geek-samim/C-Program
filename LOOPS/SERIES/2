@@ -1,0 +1,13 @@
+1 + 2 + 3 + 4 + 5 + ... + n
+
+int main()
+{
+    int i,n,sum=0;
+    n=10;
+    for(i=1;i<=n;i++)
+    {
+        sum+=i;
+    }
+    printf("Sum: %d",sum);
+    return 0;
+}
