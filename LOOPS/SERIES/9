@@ -1,0 +1,34 @@
+[(1^1)/1!] + [(2^2)/2!] + [(3^3)/3!] + [(4^4)/4!] + [(5^5)/5!] + ... + [(n^n)/n!]
+
+double power(int a, int b)
+{
+    long i, p=1;
+    for(i=1;i<=b;i++)
+    {
+        p=p*a;
+    }
+    return p;
+}
+
+double fact(int n)
+{
+    long i, f=1;
+    for(i=1;i<=n;i++)
+    {
+        f=f*i;
+    }
+    return f;
+}
+
+int main()
+{
+    long i,n;
+    double sum=0;
+    n=5;
+    for(i=1;i<=n;i++)
+    {
+        sum=sum+power(i,i)/fact(i);
+    }
+    printf("Sum: %lf",sum);
+    return 0;
+}
