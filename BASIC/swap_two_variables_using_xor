@@ -1,0 +1,19 @@
+/* Swap values of two variables using XOR */
+
+#include<stdio.h>
+
+int main()
+{
+ int a;
+ int b;
+ printf("Type value of A : ");
+ scanf("%i",&a);
+ printf("\nType value of b : ");
+ scanf("%i",&b);
+  a ^= b;
+  b ^= a;
+  a ^= b;
+ printf("A : %i",a);
+ printf("\nB : %i",b);
+ return 0;
+}
