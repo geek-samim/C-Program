@@ -1,0 +1,37 @@
+/* calculate power using while loop */
+#include<stdio.h>
+int main()
+{
+    int a, b, i, p;
+    printf("Enter value of a: ");
+    scanf("%d",&a);
+    printf("Enter value of b: ");
+    scanf("%d",&b);   
+    p=1;
+    i=1;
+    while(i<=b)
+    {
+        p = p * a;
+        i++;
+    }
+    printf("Power : %d",p);
+ return 0;
+}
+
+-----------------------------------------------------
+
+/* Calculate power using for loop */
+#include<stdio.h>
+int main()
+{
+    int a, b, i, p;
+    printf("Enter value of a: ");
+    scanf("%d",&a);
+    printf("Enter value of b: ");
+    scanf("%d",&b);   
+    p=1;
+    for(i=1;i<=b;i++)
+        p = p * a;
+    printf("Power : %d",p);
+ return 0;
+}
