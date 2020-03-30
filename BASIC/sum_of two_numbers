@@ -1,0 +1,16 @@
+/*    Sum of two Variable    */
+#include<stdio.h>
+ int main()
+ {
+  int var2;
+  int var1;
+  int var3;
+
+  printf("Type your frist value to add : ");
+   scanf("%i",&var1);
+  printf("Type your second value to add : ");
+   scanf("%i",&var2);
+  var3 =var2+var1;
+   printf("Total of your value =  %i",var3);
+  return 0;
+ }
