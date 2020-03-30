@@ -1,0 +1,19 @@
+/*    Swap the values of two Variables using three variables    */
+#include<stdio.h>
+int main()
+{
+ int a;
+ int b;
+ int c;
+
+ printf("Type value of A : ");
+ scanf("%i",&a);
+ printf("\nType value of b : ");
+ scanf("%i",&b);
+ c=a;
+ a=b;
+ b=c;
+ printf("A : %i",a);
+ printf("\nb : %i",b);
+ return 0;
+}
