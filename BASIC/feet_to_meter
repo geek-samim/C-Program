@@ -1,0 +1,12 @@
+/* convert feet to meter */
+
+#include<stdio.h>
+int main()
+{
+    float m,f;
+    printf("Type feet : ");
+    scanf("%f",&f);
+    m = f / 3.2808399;
+    printf("meter: %f",m);
+    return 0;
+}
