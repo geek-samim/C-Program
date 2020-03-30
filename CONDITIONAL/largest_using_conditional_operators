@@ -1,0 +1,13 @@
+/*    Find largest value between two variables - single line - Conditional Operator  */
+
+#include<stdio.h>
+int main()
+{
+ int a,b,d;
+
+ printf("Type values of A and B : ");
+ scanf("%d %d",&a,&b);
+ d=(a>=b?a:b);
+ printf("Greatest value : %d",d);
+ return 0;
+}
