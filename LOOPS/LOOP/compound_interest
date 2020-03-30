@@ -1,0 +1,28 @@
+/*    Compund Interest    */
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+     float p,r,i,t,ci,a;
+
+    
+     printf("Type the amount : ");
+     scanf("%f",&p);
+     printf("Type the interest rate : ");
+     scanf("%f",&r);
+     printf("Type the period in years: ");
+     scanf("%f",&t);
+    
+     i=1+(r/100);
+    
+     // ci=pow(i,t);
+     ci=1;
+     for(a=1;a<=t;a++)
+        ci=ci*i;
+      
+     ci=p*ci-p;
+    
+     printf("Your compound interest is : %.2f",ci);
+
+     return 0;
+}
