@@ -1,0 +1,18 @@
+/*    Calculate Simple interest    */
+#include<stdio.h>
+int main()
+{
+ float p;
+ float ir,t;
+ float in;
+
+  printf("Type your principle amount : ");
+  scanf("%f",&p);
+  printf("\n Type your rate of intrest : ");
+  scanf("%f",&ir);
+  printf("\n Type time (in year) : ");
+  scanf("%f",&t);
+  in=p*ir*t/100;
+  printf("\n You will get intrest : %.2f",in);
+ return 0;
+}
