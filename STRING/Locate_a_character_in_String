@@ -1,0 +1,32 @@
+/* Locate a character in String - STRCHR */
+
+#include<stdio.h>
+
+int main()
+{
+ char str[500];
+ int i;
+ char ch;
+ printf("Please enter your string: ");
+ // gets(str); 
+ // fgets is a better option over gets to read multiword string .
+ fgets(str, 500, stdin);
+ // Following can be added for extra precaution for '\n' character
+ // if(str[length(str)-1] == '\n') str[strlen(str)-1]=NULL;
+
+ printf("Please enter a character: ");
+ getchar(ch); 
+ 
+ for(i=0;str[i]!=NULL;i++)
+ {
+  if(str[i]==ch)
+   break;
+ }
+ 
+ if(str[i] == NULL)
+  printf("%c not found in %s",ch,str);
+ else
+  printf("\"%c\" found in \"%s\" at %d location",ch,str,i+1);
+
+ return 0;
+}
