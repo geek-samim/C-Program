@@ -1,0 +1,20 @@
+/* Reverse by Recursion */
+
+#include<stdio.h>
+int rev(int,int);
+
+int main()
+{
+ int a;
+ printf("Type a value : ");
+ scanf("%d",&a);
+ printf("Reverse: %d",rev(a,0));
+ return 0;
+}
+
+int rev(int i,int r)  
+{
+ if(i > 0)  
+  return rev(i/10,(r*10)+(i%10));  
+ return r;  
+}
