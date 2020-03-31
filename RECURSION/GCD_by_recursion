@@ -1,0 +1,20 @@
+/* GCD by recursion */
+
+#include<stdio.h>
+int gcd(int,int);
+
+int main()
+{
+ int a,b;
+ printf("Type 2 values to find GCD :\n");
+ scanf("%d %d",&a,&b);
+ printf("GCD : %d",gcd(a,b));
+ return 0;
+}
+
+int gcd(int m,int n)
+{
+ if(n>m) return gcd(n,m);
+ if(n==0) return m;
+ return gcd(n,m%n);
+}
