@@ -1,0 +1,21 @@
+/* Power by Recursion */
+
+#include<stdio.h>
+int pow(int,int);
+
+int main()
+{
+ int i,j;
+ printf("Type two values : \n");
+ scanf("%d %d",&i,&j);
+ 
+ printf("i pow j = %d",pow(i,j));
+ return 0;
+}
+
+int pow(int i,int j)
+{
+ if(j==1)
+  return i;
+ return (i*pow(i,j-1));
+}
