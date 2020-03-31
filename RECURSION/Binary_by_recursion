@@ -1,0 +1,19 @@
+/* Binary by recursion */
+
+#include<stdio.h>
+void binary(long);
+int main()
+{
+ long n;
+ printf("Type a value : ");
+ scanf("%ld",&n);
+ binary(n);
+ return 0;
+}
+
+void binary(long n)
+{
+ if(n>1)
+  binary(n/2);
+ printf("%ld",n%2);
+}
