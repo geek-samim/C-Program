@@ -1,0 +1,37 @@
+/* Locate a word in String - STRSTR */
+
+#include<stdio.h>
+
+int main()
+{
+ char str1[100], str2[100];
+ int i,j,k;
+ printf("Please enter first string: ");
+ // gets(str1); 
+ // fgets is a better option over gets to read multiword string .
+ fgets(str1, 100, stdin);
+ // Following can be added for extra precaution for '\n' character
+ // if(str1[length(str1)-1] == '\n') str1[strlen(str1)-1]=NULL;
+
+ printf("Please enter a word: ");
+ // gets(str2); 
+ fgets(str2, 100, stdin);
+ // if(str2[length(str2)-1] == '\n') str2[strlen(str2)-1]=NULL;
+ 
+ for(i=0;str1[i]!=NULL;i++)
+ {
+  for(k=i,j=0;str2[j]!=NULL;j++,k++)
+   if(str1[k]!=str2[j])
+    break;
+  if(str2[j]==NULL)
+  {
+   printf("\"%s\" is the sub string of \"%s\" at %d location",str2,str1,k+1);
+   i=-1;
+   break;
+  }
+ }
+ if(i!=-1)
+  printf("\"%s\" is not the sub string of \"%s\"",str2,str1);
+
+ return 0;
+}
