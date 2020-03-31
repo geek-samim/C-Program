@@ -1,0 +1,28 @@
+/* STRING TO LOWER CASE - STRLWR */
+
+#include<stdio.h>
+
+int main()
+{
+ char str[100];
+ int i;
+ printf("Please enter a string: ");
+
+ // gets(str); 
+ // fgets is a better option over gets to read multiword string .
+
+ fgets(str, 100, stdin);
+
+ // Following can be added for extra precaution for '\n' character
+ // if(str[length(str)-1] == '\n') str[strlen(str)-1]=NULL;
+ 
+ for(i=0;str[i]!=NULL;i++)
+ {
+  if(str[i]>='A'&&str[i]<='Z')
+   str[i]+=32;
+ }
+ 
+ printf("String in lower case is: %s",str);
+
+ return 0;
+}
